@@ -67,33 +67,28 @@
                         <TextBlock Text="Quick Settings"
                                FontSize="20px"
                                Margin="10,0,0,0"/>
-                        <Grid>
-                            <TextBlock Text="Source Mode"
-                                   Margin="10,20,0,0"/>
-                            <DropDownButton HorizontalAlignment="Right"
-                                            Margin="0,15,0,0"/>
-                        </Grid>
-
+                        <ComboBox Header="Video Source"                                
+                                  Width="200"
+                                  Margin="10,20,0,0"
+                                  SelectedIndex="0">
+                            <x:String>Automatic</x:String>
+                            <x:String>Window</x:String>
+                            <x:String>Desktop</x:String>
+                        </ComboBox>
                         <StackPanel>
-                            <Grid>
-                                <TextBlock Text="Audio Track 1"
-                                   Margin="10,20,0,0"/>
-                                <DropDownButton HorizontalAlignment="Right"
-                                            Margin="0,15,0,0"/>
-                            </Grid>
-                            <Slider></Slider>
+                            <ComboBox Header="Microphone Source"                                
+                                  Width="200"
+                                  Margin="10,20,0,0"
+                                  SelectedIndex="0">
+                                <x:String>System</x:String>
+                                <x:String>Window</x:String>
+                                <x:String>Desktop</x:String>
+                            </ComboBox>
+                            <Slider Header="System Volume"
+                                    Margin="10,20,0,0"/>
+                            <Slider  Header="Microphone Volume"
+                                     Margin="10,20,0,0"/>
                         </StackPanel>
-
-                        <StackPanel>
-                            <Grid>
-                                <TextBlock Text="Audio Track 2"
-                                   Margin="10,20,0,0"/>
-                                <DropDownButton HorizontalAlignment="Right"
-                                            Margin="0,15,0,0"/>
-                            </Grid>
-                            <Slider></Slider>
-                        </StackPanel>
-                        
                     </StackPanel>
                 </Grid>
             </RelativePanel>
