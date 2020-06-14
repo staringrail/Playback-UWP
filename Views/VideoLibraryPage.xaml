@@ -15,6 +15,7 @@
             Padding="{StaticResource MediumLeftRightMargin}"
             animations:Connected.ListItemElementName="itemThumbnail"
             animations:Connected.ListItemKey="animationKeyVideoLibrary"
+            animations:ReorderGridAnimation.Duration="400"
             DesiredWidth="180"
             IsItemClickEnabled="True"
             ItemClick="OnItemClick"

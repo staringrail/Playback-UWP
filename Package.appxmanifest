@@ -49,6 +49,7 @@
 
   <Capabilities>
     <Capability Name="internetClient" />
+    <uap:Capability Name="videosLibrary"/>
   </Capabilities>
 
   <genTemplate:Metadata>
