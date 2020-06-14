@@ -28,9 +28,9 @@
             Or to use an IconElement instead of a Symbol see https://github.com/Microsoft/WindowsTemplateStudio/blob/master/docs/UWP/projectTypes/navigationpane.md
             Edit String/en-US/Resources.resw: Add a menu item title for each page
             -->
-            <winui:NavigationViewItem x:Uid="Shell_Main" Icon="Document" helpers:NavHelper.NavigateTo="views:MainPage" />
+            <winui:NavigationViewItem x:Uid="Shell_Main" Icon="Video" helpers:NavHelper.NavigateTo="views:MainPage" />
+            <winui:NavigationViewItem x:Uid="Shell_VideoLibrary" Icon="Library" helpers:NavHelper.NavigateTo="views:VideoLibraryPage" />
             <winui:NavigationViewItem x:Uid="Shell_Recording" Icon="Document" helpers:NavHelper.NavigateTo="views:RecordingPage" />
-            <winui:NavigationViewItem x:Uid="Shell_VideoLibrary" Icon="Document" helpers:NavHelper.NavigateTo="views:VideoLibraryPage" />
             <winui:NavigationViewItem x:Uid="Shell_MediaPlayer" Icon="Document" helpers:NavHelper.NavigateTo="views:MediaPlayerPage" />
         </winui:NavigationView.MenuItems>
         <i:Interaction.Behaviors>
