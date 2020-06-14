@@ -30,8 +30,8 @@
             -->
             <winui:NavigationViewItem x:Uid="Shell_Main" Icon="Video" helpers:NavHelper.NavigateTo="views:MainPage" />
             <winui:NavigationViewItem x:Uid="Shell_VideoLibrary" Icon="Library" helpers:NavHelper.NavigateTo="views:VideoLibraryPage" />
-            <winui:NavigationViewItem x:Uid="Shell_Recording" Icon="Document" helpers:NavHelper.NavigateTo="views:RecordingPage" />
-            <winui:NavigationViewItem x:Uid="Shell_MediaPlayer" Icon="Document" helpers:NavHelper.NavigateTo="views:MediaPlayerPage" />
+            <!--<winui:NavigationViewItem x:Uid="Shell_Recording" Icon="Document" helpers:NavHelper.NavigateTo="views:RecordingPage" />
+            <winui:NavigationViewItem x:Uid="Shell_MediaPlayer" Icon="Document" helpers:NavHelper.NavigateTo="views:MediaPlayerPage" />-->
         </winui:NavigationView.MenuItems>
         <i:Interaction.Behaviors>
             <behaviors:NavigationViewHeaderBehavior

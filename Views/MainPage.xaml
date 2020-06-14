@@ -13,6 +13,47 @@
                 The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
                 Place your content here.
             -->
+            <RelativePanel>
+                
+                <Grid
+                    Margin="24,24,0,24" Width="350">
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Margin"
+                                    Value="0,20,0,0"/>
+                            <Setter Property="FontSize"
+                                    Value="20px"/>
+                        </Style>
+                    </Grid.Resources>
+
+                    <Image x:Name="SmallImage"
+                           Width="300"
+                           Height="200"
+                           HorizontalAlignment="Left"
+                           Source="../Assets/StoreLogo.png"/>
+                    <StackPanel HorizontalAlignment="Right"
+                                Margin="0,15,0,0">
+                        <TextBlock Text="Not Recording"/>
+                        <TextBlock Text="Game Title"/>
+                        <Grid>
+                            <Ellipse
+                                Width="20"
+                                Height="20"
+                                Fill="Red"
+                                Stroke="Black"
+                                HorizontalAlignment="Left"
+                                Margin="0,25,0,0"/>
+                            <TextBlock Text="00:00:00"
+                                       Margin="30,20,0,0"
+                                       />
+                        </Grid>
+                    </StackPanel>
+                    
+                               
+                </Grid>
+
+
+            </RelativePanel>
         </Grid>
     </Grid>
 </Page>
