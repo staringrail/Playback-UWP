@@ -16,10 +16,9 @@
             animations:Connected.ListItemElementName="itemThumbnail"
             animations:Connected.ListItemKey="animationKeyVideoLibrary"
             animations:ReorderGridAnimation.Duration="400"
-            DesiredWidth="180"
+            MinWidth="450"
             IsItemClickEnabled="True"
-            ItemClick="OnItemClick"
-            ItemHeight="160"
+            ItemClick="OnItemClick"           
             ItemsSource="{x:Bind Source,Mode=OneWay}"
             SelectionMode="None"
             StretchContentForSingleRow="False">
@@ -27,9 +26,18 @@
                 <DataTemplate x:DataType="models:SampleOrder">
                     <Grid
                         x:Name="itemThumbnail"
+                        Height="300"
+                        MinWidth="450"
                         Padding="{StaticResource XSmallLeftTopRightBottomMargin}"
-                        Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                        <TextBlock Text="00:00"
+                                   Margin="400,200,0,0"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                        <StackPanel HorizontalAlignment="Center"
+                                    VerticalAlignment="Center" >
                             <FontIcon Glyph="{x:Bind Symbol}" />
                             <TextBlock
                                 Margin="{StaticResource XXSmallTopMargin}"
@@ -37,7 +45,15 @@
                                 Style="{ThemeResource BodyTextStyle}"
                                 Text="{x:Bind Company}" />
                         </StackPanel>
+                        <Grid VerticalAlignment="Bottom"
+                              HorizontalAlignment="Stretch"
+                              Background="DarkSlateGray"
+                              >
+                            <TextBlock Text="2020/06/13 | 02:00 PM | 4.86 GB"
+                                       HorizontalAlignment="Center"/>
+                        </Grid>
                     </Grid>
+                    
                 </DataTemplate>
             </controls:AdaptiveGridView.ItemTemplate>
         </controls:AdaptiveGridView>
