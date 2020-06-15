@@ -29,6 +29,7 @@ namespace Playback.Views
             Source.Clear();
 
             // TODO WTS: Replace this with your actual data
+            await VideoFileService.getVideosAsync();
             var data = await SampleDataService.GetContentGridDataAsync();
             foreach (var item in data)
             {
