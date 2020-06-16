@@ -14,7 +14,7 @@ namespace Playback.Services
     public static class VideoFileService
     {
         private static ObservableCollection<VideoFileInfo> videoCollection { get; } = new ObservableCollection<VideoFileInfo>();
-        public static async Task getVideosAsync()
+        public static async Task <ObservableCollection<VideoFileInfo>> GetVideosAsync()
         {
             QueryOptions options = new QueryOptions();
             options.FolderDepth = FolderDepth.Deep;
@@ -35,12 +35,18 @@ namespace Playback.Services
                 }
             }
 
+            // Wait for all video files to be retrieved before returning
+            await Task.CompletedTask;
+            return videoCollection;
         }
 
         public async static Task<VideoFileInfo> LoadVideoInfo(StorageFile file)
         {
             var properties = await file.Properties.GetVideoPropertiesAsync();
-            VideoFileInfo info = new VideoFileInfo(properties, file, file.DisplayName);
+            Windows.Storage.FileProperties.BasicProperties basicProperties = await file.GetBasicPropertiesAsync();
+
+            // Create a new VideoFileInfo object      
+            VideoFileInfo info = new VideoFileInfo(file, properties, file.DisplayName, basicProperties.Size);
             return info;
         }
     }

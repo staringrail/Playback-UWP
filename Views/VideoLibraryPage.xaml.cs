@@ -7,6 +7,7 @@ using Microsoft.Toolkit.Uwp.UI.Animations;
 
 using Playback.Core.Models;
 using Playback.Core.Services;
+using Playback.Models;
 using Playback.Services;
 
 using Windows.UI.Xaml.Controls;
@@ -16,7 +17,7 @@ namespace Playback.Views
 {
     public sealed partial class VideoLibraryPage : Page, INotifyPropertyChanged
     {
-        public ObservableCollection<SampleOrder> Source { get; } = new ObservableCollection<SampleOrder>();
+        public ObservableCollection<VideoFileInfo> Source { get; } = new ObservableCollection<VideoFileInfo>();
 
         public VideoLibraryPage()
         {
@@ -28,10 +29,9 @@ namespace Playback.Views
             base.OnNavigatedTo(e);
             Source.Clear();
 
-            // TODO WTS: Replace this with your actual data
-            await VideoFileService.getVideosAsync();
-            var data = await SampleDataService.GetContentGridDataAsync();
-            foreach (var item in data)
+            // Get Video files from library
+            var videoData = await VideoFileService.GetVideosAsync();
+            foreach (var item in videoData)
             {
                 Source.Add(item);
             }
