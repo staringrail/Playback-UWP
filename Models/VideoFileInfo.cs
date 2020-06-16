@@ -18,6 +18,10 @@ namespace Playback.Models
 
         public ulong VideoSize { get; }
 
+        public string VideoSizeString => FormatBytes(VideoSize);
+
+        public string VideoStats => $"{VideoFile.DateCreated.ToString("MM/dd/yyyy")} | {VideoFile.DateCreated.ToString("hh:mm tt")} | {VideoSizeString}";
+
         public VideoFileInfo(StorageFile file, VideoProperties properties, string name, ulong size)
         {
             VideoFile = file;
@@ -26,7 +30,18 @@ namespace Playback.Models
             VideoSize = size;
         }
 
+        private static string FormatBytes(ulong bytes)
+        {
+            string[] Suffix = { "B", "KB", "MB", "GB", "TB" };
+            int i;
+            double dblSByte = bytes;
+            for (i = 0; i < Suffix.Length && bytes >= 1024; i++, bytes /= 1024)
+            {
+                dblSByte = bytes / 1024.0;
+            }
 
+            return String.Format("{0:0.##} {1}", dblSByte, Suffix[i]);
+        }
 
     }
 }
