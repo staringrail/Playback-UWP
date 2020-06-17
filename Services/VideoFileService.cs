@@ -93,8 +93,8 @@ namespace Playback.Services
             using (IRandomAccessStream fileStream = await savedStorageFile.OpenAsync(FileAccessMode.Read))
             {
                 BitmapImage bitmapImage = new BitmapImage();
-                bitmapImage.DecodePixelHeight = 1280;
-                bitmapImage.DecodePixelWidth = 720;             
+                bitmapImage.DecodePixelHeight = 500;
+                bitmapImage.DecodePixelWidth = 500;             
                 await bitmapImage.SetSourceAsync(fileStream);
                 return bitmapImage;
             }

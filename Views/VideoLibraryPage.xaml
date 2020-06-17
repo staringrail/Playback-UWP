@@ -35,10 +35,11 @@
                         <StackPanel HorizontalAlignment="Center"
                                     VerticalAlignment="Center" >
                             <Image Source="{x:Bind VideoThumbnailImage}"
-                                  
-                                    MaxWidth="400"
-                                   />
-                            
+                                    Stretch="Fill"
+                                    Height="270"
+                                    Width="450"
+                                    Margin="0,0,0,20"/>
+
                             <!--<FontIcon Glyph="{x:Bind Symbol}" />
                             <TextBlock
                                 Margin="{StaticResource XXSmallTopMargin}"
