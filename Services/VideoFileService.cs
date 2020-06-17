@@ -10,6 +10,7 @@ using Playback.Models;
 using Playback.Views;
 using Windows.Storage.FileProperties;
 using Windows.UI.Xaml.Media.Imaging;
+using Windows.Storage.Streams;
 
 namespace Playback.Services
 {
@@ -23,7 +24,7 @@ namespace Playback.Services
             options.FileTypeFilter.Add(".mp4");
 
             // Get the Videos library
-            Windows.Storage.StorageFolder videosFolder = Windows.Storage.KnownFolders.VideosLibrary;
+            StorageFolder videosFolder = KnownFolders.VideosLibrary;
             var result = videosFolder.CreateFileQueryWithOptions(options);
 
             IReadOnlyList<StorageFile> videoFiles = await result.GetFilesAsync();
@@ -51,6 +52,10 @@ namespace Playback.Services
             // Get thumbnail image
             // TODO, fetch thumbnail from Playback.thumbs folder and use thumbnail based on name of video
             var videoThumbnail = await GetVideoThumbnailAsync(file);
+            if (videoThumbnail == null )
+            {
+                videoThumbnail = await GetDefaultImage();
+            }
 
             // Create a new VideoFileInfo object      
             VideoFileInfo info = new VideoFileInfo(file, properties, file.DisplayName, basicProperties.Size, videoThumbnail);
@@ -59,18 +64,40 @@ namespace Playback.Services
 
         private async static Task<BitmapImage> GetVideoThumbnailAsync(StorageFile file)
         {
-            // Get thumbnail
-            const uint requestedSize = 300;
-            const ThumbnailMode thumbnailMode = ThumbnailMode.VideosView;
-            const ThumbnailOptions thumbnailOptions = ThumbnailOptions.UseCurrentScale;
-            var thumbnail = await file.GetThumbnailAsync(thumbnailMode, requestedSize, thumbnailOptions);
+            BitmapImage thumbnailImage = null;
+            string fileName = (string)file.DisplayName + "-thumb.jpg";
 
-            // Create a bitmap to be the image source
-            BitmapImage bitmapImage = new BitmapImage();
-            bitmapImage.SetSource(thumbnail);
-            thumbnail.Dispose();
+            // Get the thumbnail file          
+            StorageFolder playbackFolder = await KnownFolders.VideosLibrary.GetFolderAsync("Playback");
+            StorageFolder thumbnailFolder = await playbackFolder.GetFolderAsync(".thumbs");
+            var result = await thumbnailFolder.GetItemAsync(fileName);
 
-            return bitmapImage;
+            // Check file type of StorageItem
+            if (result.IsOfType(StorageItemTypes.File))
+            {
+                thumbnailImage = await StorageFileToBitmapImage((StorageFile)result);
+            }
+
+            return thumbnailImage;
+        }
+
+        public static async Task<BitmapImage> GetDefaultImage()
+        {
+            // Get a default image instead
+            StorageFile defaultThumbail = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Assets/" + "Wide310x150Logo.scale-200.png"));
+            return await StorageFileToBitmapImage(defaultThumbail);
+        }
+
+        public static async Task<BitmapImage> StorageFileToBitmapImage(StorageFile savedStorageFile)
+        {
+            using (IRandomAccessStream fileStream = await savedStorageFile.OpenAsync(FileAccessMode.Read))
+            {
+                BitmapImage bitmapImage = new BitmapImage();
+                bitmapImage.DecodePixelHeight = 1280;
+                bitmapImage.DecodePixelWidth = 720;             
+                await bitmapImage.SetSourceAsync(fileStream);
+                return bitmapImage;
+            }
         }
     }
 }
