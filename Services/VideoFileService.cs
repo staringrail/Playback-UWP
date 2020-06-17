@@ -8,6 +8,8 @@ using Windows.Storage;
 using Windows.Storage.Search;
 using Playback.Models;
 using Playback.Views;
+using Windows.Storage.FileProperties;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace Playback.Services
 {
@@ -42,12 +44,33 @@ namespace Playback.Services
 
         public async static Task<VideoFileInfo> LoadVideoInfo(StorageFile file)
         {
+            // Get video properties
             var properties = await file.Properties.GetVideoPropertiesAsync();
-            Windows.Storage.FileProperties.BasicProperties basicProperties = await file.GetBasicPropertiesAsync();
+            BasicProperties basicProperties = await file.GetBasicPropertiesAsync();
+
+            // Get thumbnail image
+            // TODO, fetch thumbnail from Playback.thumbs folder and use thumbnail based on name of video
+            var videoThumbnail = await GetVideoThumbnailAsync(file);
 
             // Create a new VideoFileInfo object      
-            VideoFileInfo info = new VideoFileInfo(file, properties, file.DisplayName, basicProperties.Size);
+            VideoFileInfo info = new VideoFileInfo(file, properties, file.DisplayName, basicProperties.Size, videoThumbnail);
             return info;
+        }
+
+        private async static Task<BitmapImage> GetVideoThumbnailAsync(StorageFile file)
+        {
+            // Get thumbnail
+            const uint requestedSize = 300;
+            const ThumbnailMode thumbnailMode = ThumbnailMode.VideosView;
+            const ThumbnailOptions thumbnailOptions = ThumbnailOptions.UseCurrentScale;
+            var thumbnail = await file.GetThumbnailAsync(thumbnailMode, requestedSize, thumbnailOptions);
+
+            // Create a bitmap to be the image source
+            BitmapImage bitmapImage = new BitmapImage();
+            bitmapImage.SetSource(thumbnail);
+            thumbnail.Dispose();
+
+            return bitmapImage;
         }
     }
 }

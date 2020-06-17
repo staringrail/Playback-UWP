@@ -17,7 +17,7 @@ namespace Playback.Views
 {
     public sealed partial class VideoLibraryPage : Page, INotifyPropertyChanged
     {
-        public ObservableCollection<VideoFileInfo> Source { get; } = new ObservableCollection<VideoFileInfo>();
+        public ObservableCollection<VideoFileInfo> VideoCollection { get; } = new ObservableCollection<VideoFileInfo>();
 
         public VideoLibraryPage()
         {
@@ -27,13 +27,13 @@ namespace Playback.Views
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            Source.Clear();
+            VideoCollection.Clear();
 
             // Get Video files from library
             var videoData = await VideoFileService.GetVideosAsync();
             foreach (var item in videoData)
             {
-                Source.Add(item);
+                VideoCollection.Add(item);
             }
         }
 

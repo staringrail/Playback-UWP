@@ -19,7 +19,7 @@
             MinWidth="450"
             IsItemClickEnabled="True"
             ItemClick="OnItemClick"           
-            ItemsSource="{x:Bind Source,Mode=OneWay}"
+            ItemsSource="{x:Bind VideoCollection,Mode=OneWay}"
             SelectionMode="None"
             StretchContentForSingleRow="False">
             <controls:AdaptiveGridView.ItemTemplate>
@@ -38,6 +38,9 @@
                                    VerticalAlignment="Center"/>
                         <StackPanel HorizontalAlignment="Center"
                                     VerticalAlignment="Center" >
+                            <Image Source="{x:Bind VideoThumbnailImage}"
+                                   MaxWidth="300"/>
+                            
                             <!--<FontIcon Glyph="{x:Bind Symbol}" />
                             <TextBlock
                                 Margin="{StaticResource XXSmallTopMargin}"

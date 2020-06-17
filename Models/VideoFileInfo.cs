@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.Storage.FileProperties;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace Playback.Models
 {
@@ -20,14 +22,18 @@ namespace Playback.Models
 
         public string VideoSizeString => FormatBytes(VideoSize);
 
+        public BitmapImage VideoThumbnailImage;
+
         public string VideoStats => $"{VideoFile.DateCreated.ToString("MM/dd/yyyy")} | {VideoFile.DateCreated.ToString("hh:mm tt")} | {VideoSizeString}";
 
-        public VideoFileInfo(StorageFile file, VideoProperties properties, string name, ulong size)
+
+        public VideoFileInfo(StorageFile file, VideoProperties properties, string name, ulong size, BitmapImage thumbnail)
         {
             VideoFile = file;
             VideoProperties = properties;
             VideoName = name;
             VideoSize = size;
+            VideoThumbnailImage = thumbnail;
         }
 
         private static string FormatBytes(ulong bytes)
@@ -42,6 +48,5 @@ namespace Playback.Models
 
             return String.Format("{0:0.##} {1}", dblSByte, Suffix[i]);
         }
-
     }
 }
