@@ -39,10 +39,10 @@ namespace Playback.Views
 
         private void OnItemClick(object sender, ItemClickEventArgs e)
         {
-            if (e.ClickedItem is SampleOrder item)
+            if (e.ClickedItem is VideoFileInfo item)
             {
                 NavigationService.Frame.SetListDataItemForNextConnectedAnimation(item);
-                NavigationService.Navigate<VideoLibraryDetailPage>(item.OrderID);
+                NavigationService.Navigate<VideoLibraryDetailPage>(item);
             }
         }
 
