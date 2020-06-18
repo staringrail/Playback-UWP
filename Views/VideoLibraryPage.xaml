@@ -27,7 +27,7 @@
                     <Grid
                         x:Name="itemThumbnail"
                         Height="300"
-                        MinWidth="450"
+                        Width="460"
                         Padding="{StaticResource XSmallLeftTopRightBottomMargin}"
                         Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}"
                         HorizontalAlignment="Center"
@@ -37,29 +37,20 @@
                             <Image Source="{x:Bind VideoThumbnailImage}"
                                     Stretch="Fill"
                                     Height="270"
-                                    Width="450"
-                                    Margin="0,0,0,20"/>
-
-                            <!--<FontIcon Glyph="{x:Bind Symbol}" />
-                            <TextBlock
-                                Margin="{StaticResource XXSmallTopMargin}"
-                                HorizontalAlignment="Center"
-                                Style="{ThemeResource BodyTextStyle}"
-                                Text="{x:Bind Company}" />-->
+                                    Width="500"
+                                    Margin="-20,0,0,20"/>
                         </StackPanel>
-                        <TextBlock Text="00:00"
-                                   Margin="400,200,0,0"
+                        <TextBlock Text="{x:Bind VideoDuration}"
+                                   Margin="380,200,0,0"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"/>
                         <Grid VerticalAlignment="Bottom"
                               HorizontalAlignment="Stretch"
-                              Background="DarkSlateGray"
-                              >
-                            <TextBlock Text="2020/06/13 | 02:00 PM | 4.86 GB"
+                              Background="DarkSlateGray">
+                            <TextBlock Text="{x:Bind VideoStats}"
                                        HorizontalAlignment="Center"/>
                         </Grid>
                     </Grid>
-                    
                 </DataTemplate>
             </controls:AdaptiveGridView.ItemTemplate>
         </controls:AdaptiveGridView>

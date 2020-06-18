@@ -11,6 +11,7 @@ using Playback.Views;
 using Windows.Storage.FileProperties;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.Storage.Streams;
+using System.IO;
 
 namespace Playback.Services
 {
@@ -20,12 +21,12 @@ namespace Playback.Services
         public static async Task <ObservableCollection<VideoFileInfo>> GetVideosAsync()
         {
             QueryOptions options = new QueryOptions();
-            options.FolderDepth = FolderDepth.Deep;
+            options.FolderDepth = FolderDepth.Shallow;
             options.FileTypeFilter.Add(".mp4");
 
             // Get the Videos library
-            StorageFolder videosFolder = KnownFolders.VideosLibrary;
-            var result = videosFolder.CreateFileQueryWithOptions(options);
+            StorageFolder playbackFolder = await KnownFolders.VideosLibrary.GetFolderAsync("Playback");
+            var result = playbackFolder.CreateFileQueryWithOptions(options);
 
             IReadOnlyList<StorageFile> videoFiles = await result.GetFilesAsync();
 
@@ -51,11 +52,7 @@ namespace Playback.Services
 
             // Get thumbnail image
             // TODO, fetch thumbnail from Playback.thumbs folder and use thumbnail based on name of video
-            var videoThumbnail = await GetVideoThumbnailAsync(file);
-            if (videoThumbnail == null )
-            {
-                videoThumbnail = await GetDefaultImage();
-            }
+            var videoThumbnail = await GetVideoThumbnailAsync(file);            
 
             // Create a new VideoFileInfo object      
             VideoFileInfo info = new VideoFileInfo(file, properties, file.DisplayName, basicProperties.Size, videoThumbnail);
@@ -70,13 +67,19 @@ namespace Playback.Services
             // Get the thumbnail file          
             StorageFolder playbackFolder = await KnownFolders.VideosLibrary.GetFolderAsync("Playback");
             StorageFolder thumbnailFolder = await playbackFolder.GetFolderAsync(".thumbs");
-            var result = await thumbnailFolder.GetItemAsync(fileName);
-
-            // Check file type of StorageItem
-            if (result.IsOfType(StorageItemTypes.File))
+            try
             {
+                // Get thumbnail file and convert it to an image
+                var result = await thumbnailFolder.GetItemAsync(fileName);
                 thumbnailImage = await StorageFileToBitmapImage((StorageFile)result);
             }
+            catch (FileNotFoundException e)
+            {
+                // Use default image if a thumbnail is not found
+                thumbnailImage = await GetDefaultImage();
+            }
+
+            
 
             return thumbnailImage;
         }

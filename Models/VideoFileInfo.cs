@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -23,6 +24,8 @@ namespace Playback.Models
         public string VideoSizeString => FormatBytes(VideoSize);
 
         public BitmapImage VideoThumbnailImage;
+
+        public string VideoDuration => VideoProperties.Duration.ToString(@"hh\:mm\:ss");
 
         public string VideoStats => $"{VideoFile.DateCreated.ToString("MM/dd/yyyy")} | {VideoFile.DateCreated.ToString("hh:mm tt")} | {VideoSizeString}";
 
