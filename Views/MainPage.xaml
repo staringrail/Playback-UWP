@@ -13,11 +13,17 @@
                 The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
                 Place your content here.
             -->
-            <RelativePanel>
+            <RelativePanel
+                BorderBrush="Aqua"
+                BorderThickness="1">
                 <Grid
                     x:Name="GameRecordingCard"
                     Margin="24,24,0,24"
-                    Width="350">
+                    Width="350"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    BorderBrush="Aqua"
+                    BorderThickness="1">
                     <Grid.Resources>
                         <Style TargetType="TextBlock">
                             <Setter Property="Margin"
@@ -26,6 +32,11 @@
                                     Value="20px"/>
                         </Style>
                     </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="339*"/>
+                        <ColumnDefinition Width="9*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
 
                     <Image x:Name="SmallImage"
                            Width="300"
@@ -33,7 +44,7 @@
                            HorizontalAlignment="Left"
                            Source="../Assets/StoreLogo.png"/>
                     <StackPanel HorizontalAlignment="Right"
-                                Margin="0,15,0,0">
+                                Margin="0,15,0,0" Grid.ColumnSpan="3">
                         <TextBlock Text="Not Recording"/>
                         <TextBlock Text="Game Title"/>
                         <Grid>
@@ -50,11 +61,37 @@
                         </Grid>
                     </StackPanel>
                 </Grid>
+                <Grid RelativePanel.RightOf="GameRecordingCard"                     
+                      Margin="20,150,0,0"
+                      BorderBrush="Aqua"
+                      BorderThickness="1"
+                      Height="Auto"
+                      Width="Auto">
+                    <Button  Width="75"
+                             Height="75"
+                             Content="REC"                
+                             >
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Ellipse Fill="Red"
+                                             Stroke="Black"
+                                             StrokeThickness="3"/>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+
+
                 <Grid RelativePanel.Below="GameRecordingCard"
                     Margin="24,24,0,24"
                     Width="300"
-                      HorizontalAlignment="Left"
-                      VerticalAlignment="Bottom">
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    BorderBrush="Aqua"
+                    BorderThickness="1">
                     <Grid.Resources>
                         <Style TargetType="TextBlock">
                             <Setter Property="Margin"
