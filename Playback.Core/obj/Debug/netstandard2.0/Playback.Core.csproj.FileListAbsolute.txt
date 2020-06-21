@@ -1,0 +1,9 @@
+C:\Users\Me\source\repos\Playback.Core\obj\Debug\netstandard2.0\Playback.Core.AssemblyInfoInputs.cache
+C:\Users\Me\source\repos\Playback.Core\obj\Debug\netstandard2.0\Playback.Core.AssemblyInfo.cs
+C:\Users\Me\source\repos\Playback.Core\bin\Debug\netstandard2.0\Playback.Core.deps.json
+C:\Users\Me\source\repos\Playback.Core\bin\Debug\netstandard2.0\Playback.Core.dll
+C:\Users\Me\source\repos\Playback.Core\bin\Debug\netstandard2.0\Playback.Core.pdb
+C:\Users\Me\source\repos\Playback.Core\obj\Debug\netstandard2.0\Playback.Core.csprojAssemblyReference.cache
+C:\Users\Me\source\repos\Playback.Core\obj\Debug\netstandard2.0\Playback.Core.csproj.CoreCompileInputs.cache
+C:\Users\Me\source\repos\Playback.Core\obj\Debug\netstandard2.0\Playback.Core.dll
+C:\Users\Me\source\repos\Playback.Core\obj\Debug\netstandard2.0\Playback.Core.pdb

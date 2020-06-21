@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "e40jGG7qEyGvqvLZp6Z7A2fMtG8AlQ+PiNFO4MuVnK0MKvaP3SGEpIeqIsH+Jm7PvfFGx8jXC48x5P5DflTEZQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Me\\source\\repos\\Playback.Core\\Playback.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Me\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Me\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Me\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
