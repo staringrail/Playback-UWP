@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e40jGG7qEyGvqvLZp6Z7A2fMtG8AlQ+PiNFO4MuVnK0MKvaP3SGEpIeqIsH+Jm7PvfFGx8jXC48x5P5DflTEZQ==",
+  "dgSpecHash": "GIQG9wjFQK4wIfsVhJYk5lZ1LS/QYq2lOz+XG88SHzIA/ncxRFVpOGquZ7k+S8YvkfDSS6uZf0Qv71zilCq1Zg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Me\\source\\repos\\Playback.Core\\Playback.Core.csproj",
+  "projectFilePath": "C:\\Users\\Me\\source\\repos\\Playback\\Playback.Core\\Playback.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Me\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Me\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

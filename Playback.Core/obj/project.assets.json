@@ -226,11 +226,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Me\\source\\repos\\Playback.Core\\Playback.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Me\\source\\repos\\Playback\\Playback.Core\\Playback.Core.csproj",
       "projectName": "Playback.Core",
-      "projectPath": "C:\\Users\\Me\\source\\repos\\Playback.Core\\Playback.Core.csproj",
+      "projectPath": "C:\\Users\\Me\\source\\repos\\Playback\\Playback.Core\\Playback.Core.csproj",
       "packagesPath": "C:\\Users\\Me\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Me\\source\\repos\\Playback.Core\\obj\\",
+      "outputPath": "C:\\Users\\Me\\source\\repos\\Playback\\Playback.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Me\\AppData\\Roaming\\NuGet\\NuGet.Config",
