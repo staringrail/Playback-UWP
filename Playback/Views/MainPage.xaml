@@ -69,7 +69,8 @@
                       Width="Auto">
                     <Button  Width="75"
                              Height="75"
-                             Content="REC"                
+                             Content="REC"
+                             Click ="startRecording"
                              >
                         <Button.Template>
                             <ControlTemplate TargetType="Button">

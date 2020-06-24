@@ -5,7 +5,8 @@
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   xmlns:genTemplate="http://schemas.microsoft.com/appx/developer/windowsTemplateStudio"
-  IgnorableNamespaces="uap mp genTemplate">
+  xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"
+  IgnorableNamespaces="uap mp genTemplate uap6">
 
   <Identity
     Name="7C6B1234-5896-4EBD-B94E-33713703E31E"
@@ -50,6 +51,7 @@
   <Capabilities>
     <Capability Name="internetClient" />
     <uap:Capability Name="videosLibrary"/>
+    <uap6:Capability Name="graphicsCapture"/>
   </Capabilities>
 
   <genTemplate:Metadata>

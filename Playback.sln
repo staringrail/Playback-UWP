@@ -4,8 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playback", "Playback\Playback.csproj", "{CBD8C6F2-2FFA-4427-95F0-BCD3A5A6490E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57} = {ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Playback.Core", "Playback.Core\Playback.Core.csproj", "{98974F06-592E-435F-8AEF-FF4128D1061D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playback.Recorder", "Playback.Recorder\Playback.Recorder.csproj", "{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +74,26 @@ Global
 		{98974F06-592E-435F-8AEF-FF4128D1061D}.Release|x64.Build.0 = Release|Any CPU
 		{98974F06-592E-435F-8AEF-FF4128D1061D}.Release|x86.ActiveCfg = Release|Any CPU
 		{98974F06-592E-435F-8AEF-FF4128D1061D}.Release|x86.Build.0 = Release|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Debug|ARM.Build.0 = Debug|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Debug|x64.Build.0 = Debug|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Debug|x86.Build.0 = Debug|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Release|ARM.ActiveCfg = Release|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Release|ARM.Build.0 = Release|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Release|ARM64.Build.0 = Release|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Release|x64.ActiveCfg = Release|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Release|x64.Build.0 = Release|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Release|x86.ActiveCfg = Release|Any CPU
+		{ABD3602E-4C22-4DD9-B8AB-0D3AD1208A57}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

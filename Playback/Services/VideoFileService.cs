@@ -73,7 +73,7 @@ namespace Playback.Services
                 var result = await thumbnailFolder.GetItemAsync(fileName);
                 thumbnailImage = await StorageFileToBitmapImage((StorageFile)result);
             }
-            catch (FileNotFoundException e)
+            catch (FileNotFoundException)
             {
                 // Use default image if a thumbnail is not found
                 thumbnailImage = await GetDefaultImage();
