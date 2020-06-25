@@ -1,9 +1,0 @@
-C:\Users\Me\source\repos\Playback\Playback.Recorder\bin\Debug\netstandard2.0\Playback.Recorder.deps.json
-C:\Users\Me\source\repos\Playback\Playback.Recorder\bin\Debug\netstandard2.0\Playback.Recorder.dll
-C:\Users\Me\source\repos\Playback\Playback.Recorder\obj\Debug\netstandard2.0\Playback.Recorder.AssemblyInfoInputs.cache
-C:\Users\Me\source\repos\Playback\Playback.Recorder\obj\Debug\netstandard2.0\Playback.Recorder.AssemblyInfo.cs
-C:\Users\Me\source\repos\Playback\Playback.Recorder\obj\Debug\netstandard2.0\Playback.Recorder.csprojAssemblyReference.cache
-C:\Users\Me\source\repos\Playback\Playback.Recorder\obj\Debug\netstandard2.0\Playback.Recorder.csproj.CoreCompileInputs.cache
-C:\Users\Me\source\repos\Playback\Playback.Recorder\bin\Debug\netstandard2.0\Playback.Recorder.pdb
-C:\Users\Me\source\repos\Playback\Playback.Recorder\obj\Debug\netstandard2.0\Playback.Recorder.dll
-C:\Users\Me\source\repos\Playback\Playback.Recorder\obj\Debug\netstandard2.0\Playback.Recorder.pdb
