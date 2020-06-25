@@ -15,7 +15,7 @@
             -->
             <RelativePanel
                 BorderBrush="Aqua"
-                BorderThickness="1">
+                BorderThickness="0">
                 <Grid
                     x:Name="GameRecordingCard"
                     Margin="24,24,0,24"
@@ -23,7 +23,7 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     BorderBrush="Aqua"
-                    BorderThickness="1">
+                    BorderThickness="0">
                     <Grid.Resources>
                         <Style TargetType="TextBlock">
                             <Setter Property="Margin"
@@ -64,7 +64,7 @@
                 <Grid RelativePanel.RightOf="GameRecordingCard"                     
                       Margin="20,150,0,0"
                       BorderBrush="Aqua"
-                      BorderThickness="1"
+                      BorderThickness="0"
                       Height="Auto"
                       Width="Auto">
                     <Button  Width="75"
@@ -92,7 +92,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Bottom"
                     BorderBrush="Aqua"
-                    BorderThickness="1">
+                    BorderThickness="0">
                     <Grid.Resources>
                         <Style TargetType="TextBlock">
                             <Setter Property="Margin"
