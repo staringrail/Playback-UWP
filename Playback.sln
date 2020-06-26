@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playback", "Playback\Playba
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Playback.Core", "Playback.Core\Playback.Core.csproj", "{98974F06-592E-435F-8AEF-FF4128D1061D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playback.Recorder", "Playback.Recorder\Playback.Recorder.csproj", "{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,26 +69,6 @@ Global
 		{98974F06-592E-435F-8AEF-FF4128D1061D}.Release|x64.Build.0 = Release|Any CPU
 		{98974F06-592E-435F-8AEF-FF4128D1061D}.Release|x86.ActiveCfg = Release|Any CPU
 		{98974F06-592E-435F-8AEF-FF4128D1061D}.Release|x86.Build.0 = Release|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Debug|ARM.Build.0 = Debug|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Debug|ARM64.ActiveCfg = Debug|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Debug|ARM64.Build.0 = Debug|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Debug|x64.Build.0 = Debug|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Debug|x86.Build.0 = Debug|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Release|ARM.ActiveCfg = Release|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Release|ARM.Build.0 = Release|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Release|ARM64.ActiveCfg = Release|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Release|ARM64.Build.0 = Release|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Release|x64.ActiveCfg = Release|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Release|x64.Build.0 = Release|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Release|x86.ActiveCfg = Release|Any CPU
-		{2C0DDA09-8444-4ED9-995D-3A93319AA2E2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
