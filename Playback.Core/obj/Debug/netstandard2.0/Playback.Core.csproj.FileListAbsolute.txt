@@ -15,4 +15,3 @@ C:\Users\Me\source\repos\Playback\Playback.Core\obj\Debug\netstandard2.0\Playbac
 C:\Users\Me\source\repos\Playback\Playback.Core\obj\Debug\netstandard2.0\Playback.Core.csproj.CoreCompileInputs.cache
 C:\Users\Me\source\repos\Playback\Playback.Core\obj\Debug\netstandard2.0\Playback.Core.dll
 C:\Users\Me\source\repos\Playback\Playback.Core\obj\Debug\netstandard2.0\Playback.Core.pdb
-C:\Users\Me\source\repos\Playback\Playback.Core\obj\Debug\netstandard2.0\Playback.Core.csprojAssemblyReference.cache
